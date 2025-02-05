@@ -1,0 +1,24 @@
+@for $i from 1 through 5 {
+  *[data-lines="#{$i}"] {
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      line-clamp: #{$i};
+      -webkit-line-clamp: #{$i};
+   }
+}
+
+[data-grid] {
+   @apply grid grid-cols-12 gap-6;
+
+   & > *:first-child {
+      @apply col-span-5 xxl:col-span-3;
+   }
+   & > *:nth-child(2) {
+      @apply col-span-7 xxl:col-span-9;
+   }
+}
+
+[initial-hidden] {
+   @apply opacity-0;
+}

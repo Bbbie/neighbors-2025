@@ -1,0 +1,29 @@
+html {
+  
+	body {
+    font-size: 16px;
+    @apply text-general-black;
+
+    scroll-behavior: smooth;
+    
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+	}
+}
+
+*.--padded {
+  @apply px-[20px];
+}
+
+*.--wide {
+  max-width: var(--max-width);
+  @apply m-auto;
+  @extend .--padded;
+}
+
+*.--narrow {
+  max-width: var(--max-width-narrow);
+  @apply m-auto;
+  @extend .--padded;
+}

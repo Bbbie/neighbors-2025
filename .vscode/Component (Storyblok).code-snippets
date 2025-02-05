@@ -1,0 +1,20 @@
+<template>
+   <section :class="blok.component" class="" v-editable="blok":id="useID(blok)":data-uid="blok._uid">
+      <pre>{
+	{ blok
+	}
+}</pre>
+   </section>
+</template>
+
+<script setup lang="ts">
+const props = defineProps<{
+   blok: {
+      _uid: string
+      [key: string
+		]: any
+	}
+}>()
+</script>
+
+<style lang="scss" scoped></style>
